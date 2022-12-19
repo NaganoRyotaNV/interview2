@@ -1,38 +1,102 @@
-.App {
-  text-align: center;
+html{
+    height: 3000px;
+}
+.title{
+    text-align:center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.content0{
+    text-decoration-line: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.contents{
+    display: flex;
+    justify-content: space-between;
   }
+
+a:link { color:rgb(0, 0, 0);
+    text-decoration-line: none; }
+a:visited { color:rgb(0, 0, 0); 
+    text-decoration-line: none;}
+
+.content1{
+    background-color: rgb(183, 255, 215);
+    width: 150px;
+    padding: 1rem 6rem;
+    border-radius: 1rem;
+    box-shadow: 0 1rem 1rem -0.7rem black;
+    text-align:center;
+    margin: auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.content2{
+    background-color: rgb(183, 255, 215);
+    width: 150px;
+    padding: 1rem 6rem;
+    border-radius: 1rem;
+    box-shadow: 0 1rem 1rem -0.7rem black;
+    text-align:center;
+    margin: auto;
 }
 
-.App-link {
-  color: #61dafb;
+.Question{
+    background-color: rgb(255, 97, 189);
+    width: 20%;
+    padding: 1rem 6rem;
+    border-radius: 1rem;
+    box-shadow: 0 1rem 1rem -0.7rem black;
+    text-align:center;
+    margin: auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.timer{
+    background-color: rgb(255, 255, 255);
+    width: 20%;
+    font-size: 20px;
+    padding: 1rem 3rem;
+    margin:0 0 0 auto;
+}
+
+textarea,.send{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position:relative;
+    top: 40px;
+}
+
+a.home{
+    display: block;
+    margin: 0 0 0 auto;
+    padding-top:100px ;
+    width: 300px;
+    font-size: 20px;
+}
+
+.result{
+    background-color: rgb(255, 255, 255);
+    width: 20%;
+    padding: 1rem 6rem;
+    border-radius: 1rem;
+    box-shadow: 0 1rem 1rem -0.7rem black;
+    text-align:center;
+    margin: auto; 
+}
+
+form{
+    border: 2px solid #000000;
+	width: 300px;
+	height: 100px;
+    margin:0 auto;
+}
+
+.dawnload{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position:relative;
+    top: 40px;
+    border-radius: 1rem;
+    background-color: rgb(177, 230, 255);
+    cursor: pointer;
 }
