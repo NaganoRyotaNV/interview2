@@ -13,7 +13,6 @@ function App() {
     <BrowserRouter1>
     <>
         <Routes>
-          
           <Route path="/" element = {<HOME />} />
           <Route path="/Mode0" element = {<Mode0 />} />
           <Route path="/Mode1" element = {<Mode1 />} />

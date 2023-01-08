@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react"
+import { useNavigate } from "react-router-dom"
 
-export default function CountDown({seconds,handleAddtext}) {
-    const [contdown,setCountdown] = useState(seconds)
+
+
+export default function CountDown({TextValue}) {
+    const [contdown,setCountdown] = useState(200)
     const timerId = useState()
 
     useEffect(()=>{
@@ -11,12 +14,19 @@ export default function CountDown({seconds,handleAddtext}) {
         return () => clearInterval(timerId.current)
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
-
-    if(contdown <= 0){
-        return
+    
+    const navigate = useNavigate();
+    console.log(TextValue)
+    //const zero = "a"
+    if(contdown === 0){
+        const name = TextValue.current.value;
+        window.location.href = "/Feedback";
+        navigate('/Feedback',  
+        {state: {name}}) 
     }
 
-
+     
+    
     return(
         <h1 className="timer">{contdown}</h1>
     )

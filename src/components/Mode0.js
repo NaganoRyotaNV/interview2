@@ -5,15 +5,14 @@ import { useRef, useState } from 'react';
 import {v4 as uuidv4} from 'uuid';
 import { useNavigate } from "react-router-dom"
 
+
 const Mode0 = () => {
 
-  /*for(var i = 0; i < datas.length; i++){
-    const resulta = datas[i]
-  }*/
   const navigate = useNavigate();
-  const [todos,setTodos] = useState([{id: 1, name: "履歴"}
+  const [answer,setAnswer] = useState([{id: 1, name: "history"}
 ]);
-todos.map((todo) => <p key={todo.id}>{todo}</p>)
+
+answer.map((ans) => <p key={ans.id}>{ans}</p>)
   const data = [
     "自己PRをお願いします",
     "あなたを一言で表現してください",
@@ -116,26 +115,32 @@ todos.map((todo) => <p key={todo.id}>{todo}</p>)
     "一番感動したことを教えてください"
 ];
 
+
   const result =  data?.map((data) => <p key={data}>{data}</p> )
 
   const a = Math.floor(Math.random() * data.length);
   
-  /*console.log(result)*/
 
   const send = useRef();
+
+  console.log(send)
+  
   const handleAddtext = () => {
   const name = send.current.value;
-    setTodos((prevTodos) => {
-      return[...prevTodos,{id: uuidv4(),name: name}]
+    setAnswer((prevAnswer) => {
+      return[...prevAnswer,{id: uuidv4(),name: name}]
     })
-    send.current.value = null;
-    navigate('/Feedback',
-    {state: {name}})
+    send.current.value = null; 
+    navigate('/Feedback',  
+    {state: {name}}) 
   }
+
+
+  
   
   return (
     <div className="zone">
-      <CountDown handleAddtext = {handleAddtext} seconds = {10}/>
+      <CountDown TextValue = {send}/>
       <h1 className='Question'>質問{result[a]}</h1>
       <textarea  style={{resize:"none", width:600, height:100}}  ref = {send}></textarea>
       <button type="submit" component={Link} to="/Feedback" className='send' onClick={handleAddtext} >送信</button> 
